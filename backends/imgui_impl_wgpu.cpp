@@ -638,7 +638,7 @@ bool ImGui_ImplWGPU_CreateDeviceObjects()
     {
         color_state.format = g_renderTargetFormat;
         color_state.alphaBlend.operation = WGPUBlendOperation_Add;
-        color_state.alphaBlend.srcFactor = WGPUBlendFactor_SrcAlpha;
+        color_state.alphaBlend.srcFactor = WGPUBlendFactor_One;
         color_state.alphaBlend.dstFactor = WGPUBlendFactor_OneMinusSrcAlpha;
         color_state.colorBlend.operation = WGPUBlendOperation_Add;
         color_state.colorBlend.srcFactor = WGPUBlendFactor_SrcAlpha;

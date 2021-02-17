@@ -439,8 +439,8 @@ bool    ImGui_ImplDX10_CreateDeviceObjects()
         desc.SrcBlend = D3D10_BLEND_SRC_ALPHA;
         desc.DestBlend = D3D10_BLEND_INV_SRC_ALPHA;
         desc.BlendOp = D3D10_BLEND_OP_ADD;
-        desc.SrcBlendAlpha = D3D10_BLEND_INV_SRC_ALPHA;
-        desc.DestBlendAlpha = D3D10_BLEND_ZERO;
+        desc.SrcBlendAlpha = D3D10_BLEND_ONE;
+        desc.DestBlendAlpha = D3D10_BLEND_INV_SRC_ALPHA;
         desc.BlendOpAlpha = D3D10_BLEND_OP_ADD;
         desc.RenderTargetWriteMask[0] = D3D10_COLOR_WRITE_ENABLE_ALL;
         g_pd3dDevice->CreateBlendState(&desc, &g_pBlendState);
